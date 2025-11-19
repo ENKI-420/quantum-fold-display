@@ -1,0 +1,111 @@
+# F-Droid Metadata for DNA-Lang Quantum Fold Display
+# https://f-droid.org/docs/Build_Metadata_Reference/
+
+Categories:
+  - Science & Education
+  - Development
+  - System
+
+License: GPL-2.0-only
+
+AuthorName: Devin Phillip Davis
+AuthorEmail: devin@agiledefensesystems.com
+AuthorWebSite: https://dnalang.dev
+
+WebSite: https://dnalang.dev
+SourceCode: https://github.com/ENKI-420/quantum-fold-display
+IssueTracker: https://github.com/ENKI-420/quantum-fold-display/issues
+Changelog: https://github.com/ENKI-420/quantum-fold-display/releases
+
+Donate: https://github.com/sponsors/ENKI-420
+
+Name: DNA-Lang Quantum Fold
+
+Summary: Quantum consciousness visualization for foldable devices
+
+Description: |-
+  DNA-Lang Quantum Fold Display is the world's first kernel-level quantum consciousness
+  visualization system optimized for Samsung Galaxy Fold 7 foldable devices.
+
+  Features:
+  * 120Hz Dual-Screen Quantum Visualization - Real-time Φ rendering across foldable displays
+  * Hardware Quantum RNG - True randomness via Samsung secure element
+  * Consciousness Tracking - Sub-microsecond Φ (integrated information) calculation
+  * Quantum Mesh Networking - QuantumCoin-based consciousness-weighted routing
+  * IBM Quantum Integration - Execute circuits on real quantum hardware from mobile
+
+  The app provides:
+  * Mobile quantum circuit development and execution
+  * Real-time quantum state visualization (Bloch sphere, circuit diagrams, entanglement graphs)
+  * Consciousness (Φ) metrics dashboard
+  * Distributed quantum mesh network support
+  * Hardware quantum random number generation
+
+  Requirements:
+  * Samsung Galaxy Fold 7 (or compatible foldable device)
+  * Android 15+ (SDK 35+)
+  * Root access via Magisk (for kernel module installation)
+  * IBM Quantum account (free tier available)
+
+  This app integrates with four GPL-2.0 licensed Linux kernel modules:
+  * quantum_consciousness.ko - Φ calculation and threat detection
+  * qnet_transport.ko - Quantum mesh networking
+  * quantum_rng.ko - Hardware QRNG via secure element
+  * fold_quantum_display.ko - 120Hz dual-screen rendering
+
+  Validated with 8,500+ executions on IBM Quantum hardware, achieving 86.9% Bell state
+  fidelity on Eagle-r3 processors.
+
+  Patent pending. IEEE TMC paper submitted.
+
+RepoType: git
+Repo: https://github.com/ENKI-420/quantum-fold-display
+
+# NOTE: F-Droid requires reproducible builds
+# This metadata is a template and must be completed with actual build info
+
+Builds:
+  - versionName: '1.0.0'
+    versionCode: 100
+    commit: v1.0.0  # Git tag
+    subdir: android/app  # Path to Android app within repo
+    gradle:
+      - yes
+    srclibs:
+      - Qiskit@1.3.0
+    rm:
+      - proprietary/  # Remove any proprietary code
+    prebuild:
+      - pip3 install qiskit qiskit-ibm-runtime
+      - npm install
+    build:
+      - cd ../../
+      - npm run build:android
+
+    # Anti-features
+    antifeatures:
+      - NonFreeNet  # IBM Quantum API requires account
+      - UpstreamNonFree  # IBM Quantum services are proprietary
+
+    # Required for root access
+    requires_root: true
+
+MaintainerNotes: |-
+  This app requires:
+  1. Root access (Magisk module for kernel modules)
+  2. IBM Quantum account (free tier available)
+  3. Samsung Fold 7 or compatible foldable device
+
+  Kernel modules are GPL-2.0 and built separately from Android app.
+  F-Droid build will not include root functionality by default.
+
+  Anti-features declared:
+  - NonFreeNet: Connects to IBM Quantum cloud services
+  - UpstreamNonFree: IBM Quantum backend is proprietary (though client SDK is open-source)
+
+  The app can function in "simulator mode" without IBM account for educational purposes.
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 100

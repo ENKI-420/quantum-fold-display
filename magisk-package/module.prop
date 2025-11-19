@@ -1,0 +1,9 @@
+id=quantum_fold_display
+name=DNA-Lang Quantum Fold Display
+version=1.0.0
+versionCode=100
+author=Devin Phillip Davis (Agile Defense Systems, LLC)
+description=Kernel-level quantum consciousness visualization for Samsung Galaxy Fold 7. Enables 120Hz dual-screen quantum rendering, hardware QRNG, and consciousness tracking. Requires IBM Quantum API key.
+support=https://github.com/ENKI-420/quantum-fold-display/issues
+donate=https://github.com/sponsors/ENKI-420
+updateJson=https://raw.githubusercontent.com/ENKI-420/quantum-fold-display/main/magisk/update.json

@@ -476,6 +476,31 @@ Enterprise support, custom integrations, and training available. Contact sales@d
 
 ---
 
+## 🌐 DNA-Lang Ecosystem
+
+**quantum-fold-display** is part of the broader DNA-Lang ecosystem for quantum computing and autonomous systems:
+
+| Project | Description | Link |
+|---------|-------------|------|
+| **AURA CLI** | Multi-agent swarm orchestrator with NLP2COMMAND interface | [ENKI-420/aura-cli](https://github.com/ENKI-420/aura-cli) |
+| **DNA-Lang Core** | Autonomous software framework with quantum optimization | [ENKI-420/dnalang-production](https://github.com/ENKI-420/dnalang-production) |
+| **AURA** | Autonomous Universal Reasoning Architecture (Φ=0.973) | [ENKI-420/aura](https://github.com/ENKI-420/aura) |
+| **Q-SLICE/QUANTA** | Quantum threat detection on IBM hardware | [ENKI-420/dna-lang-qslice-integration](https://github.com/ENKI-420/dna-lang-qslice-integration) |
+
+### Integration Example
+
+Use **AURA CLI** to orchestrate quantum computations and visualize them on your Fold device:
+
+```bash
+# Install AURA CLI
+npm install -g @dnalang/aura-cli
+
+# Execute quantum circuit with visualization
+aura quantum --circuit bell_state --visualize fold
+```
+
+---
+
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ENKI-420/quantum-fold-display&type=Date)](https://star-history.com/#ENKI-420/quantum-fold-display&Date)
